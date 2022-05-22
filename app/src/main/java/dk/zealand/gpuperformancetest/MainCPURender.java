@@ -25,9 +25,12 @@ public class MainCPURender extends SurfaceView {
     public MainCPURender(Context context) {
         super(context);
 
+        //I have to tell the program not to use the GPU
+        this.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+
         this.setWillNotDraw(false);
 
-        polygon = new Polygon(25000, new Vec3f(0, 0, 0), new Vec3f(100.0f, 100.0f, 100.0f), new Vec3f(0, 0, 0));
+        polygon = new Polygon(10000, new Vec3f(0, 0, 0), new Vec3f(100.0f, 100.0f, 100.0f), new Vec3f(0, 0, 0));
 
         drawCounter = 0;
         startTime = new Date().getTime();

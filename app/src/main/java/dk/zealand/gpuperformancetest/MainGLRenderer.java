@@ -27,7 +27,7 @@ public class MainGLRenderer implements GLSurfaceView.Renderer {
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
         GLES20.glClearColor(0.9f, 0.9f, 0.9f, 1.0f);
 
-        polygon = new Polygon(25000, new Vec3f(0, 0, 0), new Vec3f(0.5f, 0.5f, 0.5f), new Vec3f(0, 0, 0));
+        polygon = new Polygon(10000, new Vec3f(0, 0, 0), new Vec3f(0.5f, 0.5f, 0.5f), new Vec3f(0, 0, 0));
         polygon.setupShaderProgram();
 
         startTime = new Date().getTime();
